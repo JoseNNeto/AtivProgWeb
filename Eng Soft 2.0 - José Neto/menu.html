@@ -3,19 +3,47 @@
 <head>
     <meta charset="utf-8">
     <title>Eng Soft 2.0 - José Neto</title>
-
 </head>
 <body>
-    <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Grade</a></li>
-            <ul>
-                <li><a href="#">1º Periodo</a></li>
-                <li><a href="#">4º Periodo</a></li>
-                <li><a href="#">6º Periodo</a></li>
-            </ul>
-        
-    </ul>
+    <table align="center">
+        <thead>
+            <tr border="0"><th bgcolor="white"><img src="./media/Menu.png" height="40" width="180"></th></tr>
+        </thead>
+        <tbody>
+            <tr ><td><a href="main.html" target="principal"><img src="./media/Inicio.png" height="40" width="180"></a></td></tr>
+            <tr ><td><a href="sobre.html" target="principal"><img src="./media/Sobre.png" height="40" width="180"></a></td></tr>
+            <tr ><td><a href="#" onclick="toggleSubmenu(); return false;"><img src="./media/Horarios.png" height="40" width="180"></a></td></tr>
+            <tr id="subMenu" hidden>
+                <td>
+                    <table>
+                        <tr><td><a href="1periodo.html" target="principal"><img src="./media/1Periodo.png" height="40" width="180"></a></tr>
+                        <tr><td><a href="4periodo.html" target="principal"><img src="./media/4Periodo.png" height="40" width="180"></a></td></tr>
+                        <tr><td><a href="6periodo.html" target="principal"><img src="./media/6Periodo.png" height="40" width="180"></a></td></tr>
+                        <tr><td><a href="9periodo.html" target="principal"><img src="./media/9Periodo.png" height="40" width="180"></a></td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr ><td><a href="grade.html" target="principal"><img src="./media/Grade.png" height="40" width="180"></a></td></tr>
+        </tbody>
+    </table>
+    <script>
+        function toggleSubmenu(){
+            const submenu = document.getElementById('subMenu'); // Correção de ID
+            if (submenu.hasAttribute('hidden')){
+                submenu.removeAttribute('hidden');
+            } else {
+                submenu.setAttribute('hidden', 'true');
+            }
+        }
+    </script>
 </body>
 </html>
+
+    
+    
+    <a href="#"></a>
+    
+    
+   
+    
+    
